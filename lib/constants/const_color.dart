@@ -40,13 +40,15 @@ const primarylightColor = Color.fromRGBO(220, 253, 253, 1); // white
 const primaryColor = Color(0xffC0CE3A);
 const buttonColor = Color(0xff63B546);
 
-
-
-const startColor1 = Color.fromRGBO(100,10,10,0.72) ;
-const startColor2 = Color.fromRGBO(21,72,46,0.7) ;
+const startColor1 = Color.fromRGBO(100, 10, 10, 0.72);
+const startColor2 = Color.fromRGBO(21, 72, 46, 0.7);
 const startColor3 = Color(0xff130000);
-const transparent = Color.fromRGBO(255,255,255,0.2) ;
+const transparent = Color.fromRGBO(255, 255, 255, 0.2);
 
-
+const termsColor = Color.fromRGBO(51, 51, 51, 1);
+const termsBackColor = Color.fromRGBO(242, 242, 242, 1);
 Color errorColor = Colors.red;
-
+List<Color> Ovalcolors = [
+  Color.fromRGBO(255, 197, 0, 1),
+  Color.fromRGBO(73, 208, 91, 1),
+];

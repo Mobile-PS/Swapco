@@ -1,14 +1,15 @@
-
 import 'package:get/get_navigation/src/routes/get_route.dart';
 import 'package:get/get.dart';
+import 'package:swapco/dialog/first.dart';
 import 'package:swapco/login/login_screen.dart';
+import 'package:swapco/my_closet/my_closet_screen.dart';
+import 'package:swapco/profile/profile_screen.dart';
 import 'package:swapco/signup/signup_screen.dart';
-
 
 List<GetPage> routes = [
   GetPage(
     name: '/',
-    page: () => SignupScreen(),
+    page: () => MyClosetScreen(),
   ),
   GetPage(
     name: '/login_screen',
@@ -30,9 +31,6 @@ List<GetPage> routes = [
     name: '/dmc_screen',
     page: () => DMCListScreen(),
   ),*/
-
-
-
 ];
 
 // note that you can create separated file for grouped route

@@ -8,7 +8,14 @@ class ConstImage {
   final googleImage = "assets/images/google.png";
   final facebbokImage = "assets/images/facebook.png";
   final ovalImage = "assets/images/oval.png";
-
-
-
+  final signUpDialog = "assets/images/signup_dialog.png";
+  final artWork = "assets/images/artwork.png";
+  final starWork = "assets/images/circle_star_bg.png";
+  final person = "assets/images/person.png";
+  final pen_background = "assets/images/pen_background.png";
+  final pen = "assets/images/pen.png";
+  final star = "assets/images/star.png";
+  final mycloset = "assets/images/mycloset.png";
+  final upload = "assets/images/upload.png";
+  final closetUpload = "assets/images/closet_upload.png";
 }
