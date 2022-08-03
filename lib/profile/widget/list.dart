@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:swapco/constants/const_color.dart';
 import 'package:swapco/constants/constants.dart';
 
-class DefaultButton extends StatelessWidget {
-  const DefaultButton({Key? key, this.text, this.image}) : super(key: key);
+class ListTileWidget extends StatelessWidget {
+  const ListTileWidget({Key? key, this.text, this.image}) : super(key: key);
   final String? text;
   final String? image;
 

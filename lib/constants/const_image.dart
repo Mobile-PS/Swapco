@@ -18,4 +18,9 @@ class ConstImage {
   final mycloset = "assets/images/mycloset.png";
   final upload = "assets/images/upload.png";
   final closetUpload = "assets/images/closet_upload.png";
+  final modelImage = "assets/images/model_image.png";
+  final coin = "assets/images/coin.png";
+  final itsMatch = "assets/images/its_match.png";
+  final starBack = "assets/images/star_background.png";
+  final king = "assets/images/king.png";
 }

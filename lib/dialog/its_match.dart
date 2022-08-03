@@ -9,12 +9,12 @@ import 'package:swapco/dialog/dialog_button.dart';
 import 'package:swapco/login/default_button1.dart';
 import 'package:swapco/utility/coin_count.dart';
 
-class LetsSwapDialog extends StatefulWidget {
+class ItsMatchDialog extends StatefulWidget {
   @override
-  _LetsSwapDialog createState() => _LetsSwapDialog();
+  _ItsMatchDialog createState() => _ItsMatchDialog();
 }
 
-class _LetsSwapDialog extends State<LetsSwapDialog> {
+class _ItsMatchDialog extends State<ItsMatchDialog> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +27,7 @@ class _LetsSwapDialog extends State<LetsSwapDialog> {
                 borderRadius: BorderRadius.all(Radius.circular(30))),
             child: Stack(alignment: Alignment.center, children: [
               Positioned(
-                  bottom: 125,
+                  bottom: 185,
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -54,9 +54,6 @@ class _LetsSwapDialog extends State<LetsSwapDialog> {
                                             fontSize: 15,
                                             color: Colors.white,
                                             fontWeight: FontWeight.w500)),
-                                    CoinCount(
-                                      count: '20',
-                                    )
                                   ],
                                 ),
                                 Column(
@@ -70,19 +67,9 @@ class _LetsSwapDialog extends State<LetsSwapDialog> {
                                             color: Colors.white,
                                             fontWeight: FontWeight.w500),
                                       ),
-                                      CoinCount(
-                                        count: '20',
-                                      )
                                     ])
                               ],
                             )),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        DialogButton(
-                          height: 44,
-                          text: 'Swap Coins',
-                        ),
                         SizedBox(
                           height: 20,
                         ),
@@ -105,7 +92,7 @@ class _LetsSwapDialog extends State<LetsSwapDialog> {
               ),
               Positioned(
                   top: 45,
-                  child: Text('LETS SWAP',
+                  child: Text("It's a Match",
                       style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,

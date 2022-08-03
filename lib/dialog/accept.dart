@@ -16,24 +16,44 @@ class AcceptsDialog extends StatefulWidget {
 class _AcceptsDialog extends State<AcceptsDialog> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 303,
-      height: 404,
-      color: Colors.red,
-      margin: EdgeInsets.all(60),
-      alignment: Alignment.center,
-      child: Column(
-        children: [
-          Image.asset(constImage.artWork),
-          Text('Camera/Data Access'),
-          Text(
-              'Please allow access to your camera to take photos/videos or upload photos/videos from your mobile.'),
-          DialogButton(
-            text: 'Allow access',
-          ),
-          Text('Skip'),
-        ],
-      ),
+    return Scaffold(
+      body: Container(
+          width: screenWidth(context) / 1.3,
+          height: screenHeight(context) / 1.3,
+          color: Colors.white,
+          padding: EdgeInsets.all(10),
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Image.asset(constImage.artWork),
+              Text(
+                'Camera/Data Access',
+                style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700),
+              ),
+              Text(
+                'Please allow access to your camera to take photos/videos or upload photos/videos from your mobile.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 15,
+                    color: Color.fromRGBO(74, 74, 74, 1),
+                    fontWeight: FontWeight.w700),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              DialogButton(
+                height: 45,
+                text: 'Allow access',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text('Skip'),
+            ],
+          )),
     );
   }
 }

@@ -7,6 +7,7 @@ import 'package:swapco/constants/const_color.dart';
 import 'package:swapco/constants/constants.dart';
 import 'package:swapco/dialog/dialog_button.dart';
 import 'package:swapco/login/default_button1.dart';
+import 'package:swapco/utility/coin_count.dart';
 
 class CoinSwapDialog extends StatefulWidget {
   @override
@@ -16,64 +17,61 @@ class CoinSwapDialog extends StatefulWidget {
 class _CoinSwapDialog extends State<CoinSwapDialog> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Container(
-          width: 303,
-          height: screenHeight(context) / 3.2,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          child: Stack(alignment: Alignment.center, children: [
-            Positioned(
-                bottom: 120,
-                child: Container(
-                  height: screenHeight(context) / 3.1,
-                  width: screenWidth(context),
-                  // margin: EdgeInsets.only(top: 40, left: 40, right: 40),
-                  decoration: BoxDecoration(
-                    borderRadius:
-                        new BorderRadius.all(Radius.elliptical(260, 180)),
-                    gradient: LinearGradient(
-                        begin: Alignment.centerLeft,
-                        end: Alignment.centerRight,
-                        colors: Ovalcolors),
-                  ),
-                )),
-            Stack(alignment: Alignment.center, children: [
-              Positioned(bottom: 80, child: Text('Accept Swap Coins')),
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            height: 200,
+            width: 300,
+            child: Stack(alignment: Alignment.center, children: [
               Positioned(
-                  bottom: 40,
+                  bottom: 50,
                   child: Container(
-                      child: Row(
-                    children: [Image.asset(constImage.starWork), Text('20')],
-                  )))
-            ])
-          ]),
-        ),
-        SizedBox(
-          height: 20,
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Text(
-          'Welcome to SwapCo',
-          style: TextStyle(
-              fontSize: 20,
-              color: Color.fromRGBO(51, 51, 51, 1),
-              fontWeight: FontWeight.w700),
-        ),
-        SizedBox(
-          height: 50,
-        ),
-        DialogButton(
-          height: 44,
-          text: 'ACCEPT',
-        ),
-        Text('Maybe later')
-      ],
+                    height: screenHeight(context) / 3.1,
+                    width: 303,
+                    // margin: EdgeInsets.only(top: 40, left: 40, right: 40),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          alignment: Alignment.bottomCenter,
+                          image: AssetImage(constImage.starBack),
+                          opacity: 0.5),
+                      borderRadius:
+                          new BorderRadius.all(Radius.elliptical(260, 180)),
+                      gradient: LinearGradient(
+                          begin: Alignment.centerLeft,
+                          end: Alignment.centerRight,
+                          colors: Ovalcolors),
+                    ),
+                  )),
+              Positioned(
+                top: 40,
+                child: Text(
+                  'Accept Swap Coins',
+                  style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700),
+                ),
+              ),
+              Positioned(
+                  top: 80,
+                  child: CoinCount(
+                    count: '20',
+                  ))
+            ]),
+          ),
+          DialogButton(
+            height: 44,
+            text: 'ACCEPT',
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Text('Maybe later')
+        ],
+      ),
     );
   }
 }

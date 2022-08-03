@@ -16,7 +16,8 @@ class LetsSwapDialog extends StatefulWidget {
 class _LetsSwapDialog extends State<LetsSwapDialog> {
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Scaffold(
+        body: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
@@ -79,6 +80,6 @@ class _LetsSwapDialog extends State<LetsSwapDialog> {
         ),
         Text('Maybe later')
       ],
-    );
+    ));
   }
 }
