@@ -13,6 +13,7 @@ import 'package:swapco/login/login_screen.dart';
 import 'package:swapco/profile/widget/list.dart';
 import 'package:swapco/signup/widget/default_button.dart';
 import 'package:swapco/signup/widget/privacy_policy.dart';
+import 'package:swapco/utility/default_button_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -67,17 +68,17 @@ class _ProfileScreen extends State<ProfileScreen> {
             ),
           ),
           Container(
-            height: screenHeight(context) / 3,
+            height: screenHeight(context) / 5,
             child: Stack(alignment: Alignment.center, children: <Widget>[
               Positioned(
-                  bottom: 56,
+                  bottom: 16,
                   child: CircleAvatar(
                     radius: 68.0,
                     backgroundImage: AssetImage(constImage.person),
                     backgroundColor: Colors.transparent,
                   )),
               Positioned(
-                  bottom: 55,
+                  bottom: 15,
                   left: 215,
                   child: CircleAvatar(
                       radius: 20.0,
@@ -85,10 +86,25 @@ class _ProfileScreen extends State<ProfileScreen> {
                       child: Image.asset(constImage.king)))
             ]),
           ),
-          Text('Jeannie Weingarten'),
-          Text('Jeannie@example.com'),
-          DefaultButton1(
+          Text(
+            'Jeannie Weingarten',
+            style: TextStyle(
+                fontSize: 24, color: Colors.black, fontWeight: FontWeight.w500),
+          ),
+          Text(
+            'Jeannie@example.com',
+            style: TextStyle(
+                color: Color.fromRGBO(155, 155, 155, 1), fontSize: 17),
+          ),
+          SizedBox(
+            height: 15,
+          ),
+          DefaultButtonWidget(
+            height: 45,
             text: 'Edit Profile',
+          ),
+          SizedBox(
+            height: 15,
           ),
           Expanded(
             child: ListView(
