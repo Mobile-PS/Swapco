@@ -23,4 +23,10 @@ class ConstImage {
   final itsMatch = "assets/images/its_match.png";
   final starBack = "assets/images/star_background.png";
   final king = "assets/images/king.png";
+  final paper = "assets/images/paper.png";
+  final bigcoin = "assets/images/bigcoin.png";
+
+  final cam_sele = "assets/images/camera_sel.png";
+  final video_sele = "assets/images/video_sel.png";
+  final galary_sele = "assets/images/galary_sele.png";
 }
