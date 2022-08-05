@@ -52,3 +52,6 @@ List<Color> Ovalcolors = [
   Color.fromRGBO(255, 197, 0, 1),
   Color.fromRGBO(73, 208, 91, 1),
 ];
+
+const filterWidgetsColor = Color.fromRGBO(239, 239, 239, 1);
+const selectedSizeColor = Color.fromRGBO(0, 146, 69, 1);

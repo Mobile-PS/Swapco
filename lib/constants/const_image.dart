@@ -29,4 +29,8 @@ class ConstImage {
   final cam_sele = "assets/images/camera_sel.png";
   final video_sele = "assets/images/video_sel.png";
   final galary_sele = "assets/images/galary_sele.png";
+
+  final closeButton = "assets/images/close.png";
+
+  final downArrow = "assets/icons/down_arrow.png";
 }
