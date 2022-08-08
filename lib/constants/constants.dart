@@ -1,11 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:swapco/constants/const_color.dart';
 import 'package:swapco/constants/const_image.dart';
 import 'package:swapco/constants/const_string.dart';
-
-
-
 
 const kAnimationDuration = Duration(microseconds: 100);
 
@@ -31,9 +27,6 @@ const String twoRatingQuestion = "What went wrong?";
 const String threeRatingQuestion = "What went wrong?";
 const String fourRatingQuestion = "What could be better?";
 const String fiveRatingQuestion = "What did you like?";
-
-
-
 
 /*
 final submittedPinTheme = PinTheme(
@@ -71,7 +64,7 @@ final customfocusBorder = OutlineInputBorder(
   ),
 );
 
-final customerrorBorder =  OutlineInputBorder(
+final customerrorBorder = OutlineInputBorder(
   borderRadius: BorderRadius.circular(10.0),
   borderSide: BorderSide(
     color: Colors.red,
@@ -82,23 +75,15 @@ final customerrorBorder =  OutlineInputBorder(
 final RegExp emailRegex = new RegExp(
     r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$");
 
-
 final RegExp aadharRegex = new RegExp(r"^[2-9]{1}[0-9]{11}$");
-
 
 final RegExp panRegex = new RegExp(r"^[A-Z]{5}[0-9]{4}[A-Z]{1}");
 
+final RegExp numberRegex = new RegExp(r"^[0-9]$");
 
-final RegExp numberRegex = new RegExp(
-    r"^[0-9]$");
+final RegExp letterRegex = new RegExp(r'[a-zA-Z]');
 
-final RegExp letterRegex = new RegExp(
-    r'[a-zA-Z]');
+final RegExp minEightletterRegex = new RegExp(r'[0-9]');
 
-final RegExp minEightletterRegex = new RegExp(
-    r'[0-9]');
-
-final RegExp urlRegex = new RegExp( r"((https?:www\.)|(https?:\/\/)|(www\.))[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9]{1,6}(\/[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)?");
-
-
-
+final RegExp urlRegex = new RegExp(
+    r"((https?:www\.)|(https?:\/\/)|(www\.))[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9]{1,6}(\/[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)?");

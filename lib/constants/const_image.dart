@@ -32,5 +32,8 @@ class ConstImage {
 
   final closeButton = "assets/images/close.png";
 
+  final cameraListing = "assets/images/camera_listing.png";
+
   final downArrow = "assets/icons/down_arrow.png";
+  final navigation = "assets/icons/locations.png";
 }

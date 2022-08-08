@@ -7,6 +7,7 @@ import 'package:swapco/dialog/its_match.dart';
 import 'package:swapco/dialog/lets_swap.dart';
 import 'package:swapco/dialog/selection_method/selection_method.dart';
 import 'package:swapco/filter/filter_screen.dart';
+import 'package:swapco/listing_details/listing_details_screen.dart';
 import 'package:swapco/login/login_screen.dart';
 import 'package:swapco/my_closet/my_closet_screen.dart';
 import 'package:swapco/profile/profile_screen.dart';
@@ -17,7 +18,7 @@ import 'package:swapco/utility/coin_count.dart';
 List<GetPage> routes = [
   GetPage(
     name: '/',
-    page: () => FilterScreen(),
+    page: () => ListingDetailsScreen(),
   ),
   GetPage(
     name: '/login_screen',

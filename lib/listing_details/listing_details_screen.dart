@@ -1,29 +1,18 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:get/get.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:swapco/constants/common.dart';
 import 'package:swapco/constants/const_color.dart';
-import 'package:swapco/constants/const_image.dart';
-import 'package:swapco/constants/constants.dart';
-import 'package:swapco/dialog/dialog_button.dart';
-import 'package:swapco/filter/widget/Location_widget.dart';
 import 'package:swapco/filter/widget/dropdown.dart';
-import 'package:swapco/filter/widget/size_container.dart';
 import 'package:swapco/filter/widget/size_list.dart';
-import 'package:swapco/login/login_screen.dart';
-import 'package:swapco/signup/widget/default_button.dart';
-import 'package:swapco/signup/widget/privacy_policy.dart';
-import 'package:swapco/utility/default_button_widget.dart';
+import 'package:swapco/listing_details/widget/add_photo.dart';
 import 'package:swapco/utility/simple_button_widget.dart';
 
-class FilterScreen extends StatefulWidget {
+class ListingDetailsScreen extends StatefulWidget {
   @override
-  _FilterScreen createState() => _FilterScreen();
+  _ListingDetailsScreen createState() => _ListingDetailsScreen();
 }
 
-class _FilterScreen extends State<FilterScreen> {
+class _ListingDetailsScreen extends State<ListingDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,23 +37,57 @@ class _FilterScreen extends State<FilterScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  Icon(
+                    Icons.check,
+                    color: Colors.white,
+                    size: 25,
+                  ),
                   Text(
                     textAlign: TextAlign.center,
-                    'Filter',
+                    'Listing Details',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       color: Colors.white,
-                      fontSize: 34,
+                      fontSize: 20,
                     ),
                   ),
-                  Image.asset(constImage.closeButton)
+                  Icon(Icons.close, color: Colors.white, size: 25)
                 ],
               ),
             ),
             SizedBox(
               height: 20,
             ),
-            LocationWidget(title: 'Location'),
+            Text(
+              'Photos',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: selectedSizeColor,
+                fontSize: 30,
+              ),
+            ),
+            Text(
+              'Select upto 16 photos',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                color: Color.fromRGBO(130, 130, 130, 1),
+                fontSize: 16,
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                AddPhotoDotWidget(
+                  camera: true,
+                ),
+                AddPhotoDotWidget(
+                  camera: false,
+                ),
+                AddPhotoDotWidget(
+                  camera: false,
+                ),
+              ],
+            ),
             DropdownWidget(title: 'Category'),
             DropdownWidget(title: 'Sub Category'),
             SizeList(),
