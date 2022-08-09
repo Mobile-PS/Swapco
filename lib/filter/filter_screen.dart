@@ -73,6 +73,8 @@ class _FilterScreen extends State<FilterScreen> {
             ),
             SimpleButtonWidget(
               text: 'Save',
+              color: selectedSizeColor,
+              width: screenWidth(context) / 2,
               height: 44,
             )
           ],

@@ -36,4 +36,6 @@ class ConstImage {
 
   final downArrow = "assets/icons/down_arrow.png";
   final navigation = "assets/icons/locations.png";
+
+  final penIcon = "assets/icons/pen_icon.png";
 }

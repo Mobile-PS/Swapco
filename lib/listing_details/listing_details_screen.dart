@@ -2,9 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:swapco/constants/common.dart';
 import 'package:swapco/constants/const_color.dart';
+import 'package:swapco/constants/constants.dart';
 import 'package:swapco/filter/widget/dropdown.dart';
 import 'package:swapco/filter/widget/size_list.dart';
 import 'package:swapco/listing_details/widget/add_photo.dart';
+import 'package:swapco/listing_details/widget/add_photo_button.dart';
+import 'package:swapco/listing_details/widget/photo_box.dart';
 import 'package:swapco/utility/simple_button_widget.dart';
 
 class ListingDetailsScreen extends StatefulWidget {
@@ -58,25 +61,31 @@ class _ListingDetailsScreen extends State<ListingDetailsScreen> {
             SizedBox(
               height: 20,
             ),
-            Text(
-              'Photos',
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: selectedSizeColor,
-                fontSize: 30,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Photos',
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  color: selectedSizeColor,
+                  fontSize: 30,
+                ),
               ),
             ),
-            Text(
-              'Select upto 16 photos',
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                color: Color.fromRGBO(130, 130, 130, 1),
-                fontSize: 16,
-              ),
-            ),
+            Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Select upto 16 photos',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    color: Color.fromRGBO(130, 130, 130, 1),
+                    fontSize: 16,
+                  ),
+                )),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                PhotoBoxidget(image: constImage.modelImage),
                 AddPhotoDotWidget(
                   camera: true,
                 ),
@@ -88,15 +97,28 @@ class _ListingDetailsScreen extends State<ListingDetailsScreen> {
                 ),
               ],
             ),
-            DropdownWidget(title: 'Category'),
-            DropdownWidget(title: 'Sub Category'),
+            AddMoreButtonWidget(
+              text: 'Add More Photos',
+            ),
             SizeList(),
             SizedBox(
               height: 60,
             ),
-            SimpleButtonWidget(
-              text: 'Save',
-              height: 44,
+            Row(
+              children: [
+                SimpleButtonWidget(
+                  text: 'Save Draft',
+                  color: Colors.green,
+                  height: 44,
+                  width: screenWidth(context) / 2.5,
+                ),
+                SimpleButtonWidget(
+                  text: 'Discard',
+                  color: Colors.red,
+                  height: 44,
+                  width: screenWidth(context) / 2.5,
+                ),
+              ],
             )
           ],
         ),
