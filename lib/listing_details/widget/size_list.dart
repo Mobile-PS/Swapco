@@ -1,15 +1,18 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:swapco/constants/common.dart';
 import 'package:swapco/constants/const_color.dart';
 import 'package:swapco/filter/widget/size_container.dart';
+import 'package:swapco/listing_details/widget/size_container.dart';
 
-class SizeList extends StatelessWidget {
+class SizeListingList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: const EdgeInsets.all(5.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text('Size',
               style: TextStyle(
@@ -17,35 +20,42 @@ class SizeList extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                   color: Color.fromRGBO(74, 74, 74, 1))),
           Container(
-              height: 60,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  SizeContainerWidget(
-                    color: filterWidgetsColor,
-                    text: 'XS',
-                  ),
-                  SizeContainerWidget(
-                    color: filterWidgetsColor,
-                    text: 'S',
-                  ),
-                  SizeContainerWidget(
-                    color: selectedSizeColor,
-                    text: 'M',
-                  ),
-                  SizeContainerWidget(
-                    color: filterWidgetsColor,
-                    text: 'L',
-                  ),
-                  SizeContainerWidget(
-                    color: filterWidgetsColor,
-                    text: 'XL',
-                  ),
-                  SizeContainerWidget(
-                    color: filterWidgetsColor,
-                    text: 'XXL',
-                  ),
-                ],
+              height: 33,
+              width: screenWidth(context) / 1.46,
+              child: Expanded(
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    SizeContainerListingWidget(
+                      color: Colors.white,
+                      text: 'XS',
+                    ),
+                    SizeContainerListingWidget(
+                      color: Colors.white,
+                      text: 'S',
+                    ),
+                    SizeContainerListingWidget(
+                      color: selectedSizeColor,
+                      text: 'M',
+                    ),
+                    SizeContainerListingWidget(
+                      color: Colors.white,
+                      text: 'L',
+                    ),
+                    SizeContainerListingWidget(
+                      color: Colors.white,
+                      text: 'XL',
+                    ),
+                    SizeContainerListingWidget(
+                      color: Colors.white,
+                      text: 'XXL',
+                    ),
+                    SizeContainerListingWidget(
+                      color: Colors.white,
+                      text: 'XXXL',
+                    ),
+                  ],
+                ),
               )),
         ],
       ),

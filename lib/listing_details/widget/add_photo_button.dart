@@ -15,19 +15,22 @@ class AddMoreButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialButton(
-      color: Color.fromRGBO(232, 232, 232, 1),
-      elevation: 0,
-      minWidth: screenWidth(context),
-      shape: RoundedRectangleBorder(
-          borderRadius: new BorderRadius.all(new Radius.circular(4))),
-      onPressed: () => press!(),
-      child: Text(
-        text!,
-        style: TextStyle(
-            color: Color.fromRGBO(51, 51, 51, 1),
-            fontSize: 10,
-            fontWeight: FontWeight.w500),
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: MaterialButton(
+        color: Color.fromRGBO(232, 232, 232, 1),
+        elevation: 0,
+        minWidth: screenWidth(context),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(4))),
+        onPressed: () => press!(),
+        child: Text(
+          text!,
+          style: TextStyle(
+              color: Color.fromRGBO(51, 51, 51, 1),
+              fontSize: 10,
+              fontWeight: FontWeight.w500),
+        ),
       ),
     );
   }
